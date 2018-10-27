@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="app1">
+	<head>
+		<meta charset="utf-8">
+		<title>App-1</title>
+		<script type="text/javascript" src="angular.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+
+		<style type="text/css">
+			body {
+				font-size: 1.5em;
+				text-align: center;
+				background-image: url("bg11.png");
+         		background-size: auto;
+         		background-attachment: fixed;
+			}
+
+			#name{
+				width: 400px;
+				height: 45px;
+				font-size: 110%;
+				border-radius: 25px;
+				border-width: 0;
+				background-color: black;
+				color: white;
+				opacity: 0.80;
+				padding:0px 15px 0px 15px;
+				border: solid white 1px; 
+				text-align: center;
+
+			}
+
+			button {
+				width: 100px;
+				height: 40px;
+				font-size: 105%;
+				border-radius: 30px;
+				border-width: 0px;
+				background-image:-webkit-linear-gradient(
+				#acc5e9 10%, 		#a3c0f2 18%, 
+				#61a0ed 39%,		#55a3f2 70%, 
+				#82c2f1 91.72%, 	#9AD2F2 100%); 
+			}
+
+			#div1 {
+				position: relative;
+				top:120px;
+				border: solid 5px black;
+				margin: 0 auto;
+				width: 460px;
+				background-color: black;
+				color: white;
+				opacity: 0.80;	
+				border-radius: 50px;
+                animation: fadein 1s; 						
+			}
+
+			@keyframes fadein {
+    	        from { transform: scale(0); }
+                to   { transform: scale(1); }
+            }
+
+		</style>
+	</head>
+	<body>
+		<div ng-controller="NameExtractor" id="div1">
+			<h2>First Angular JS App</h2>
+			<input type="text" ng-model="name" id="name" placeholder="Type Something" ng-keyup="displayNumeric()">
+			<br><br>
+			<button ng-click="reset()">Reset</button>
+			<br><br>{{totalValue}}
+			<br><br>
+		</div>
+	</body>
+</html>
