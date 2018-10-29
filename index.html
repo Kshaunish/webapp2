@@ -31,8 +31,7 @@
 			}
 
 			button {
-				width: 100px;
-				height: 40px;
+				position: relative;
 				font-size: 105%;
 				border-radius: 30px;
 				border-width: 0px;
@@ -40,6 +39,21 @@
 				#acc5e9 10%, 		#a3c0f2 18%, 
 				#61a0ed 39%,		#55a3f2 70%, 
 				#82c2f1 91.72%, 	#9AD2F2 100%); 
+			}
+
+			#box_button {
+				width: 100px;
+				height: 40px;
+			}
+
+			#circle_button {
+				width: 100px;
+				height: 40px;
+			}
+
+			#reset_button {
+				width: 100px;
+				height: 40px;
 			}
 
 			#div1 {
@@ -50,7 +64,7 @@
 				width: 460px;
 				background-color: black;
 				color: white;
-				opacity: 0.80;	
+				opacity: 0.85;	
 				border-radius: 50px;
                 animation: fadein 1s; 						
 			}
@@ -60,16 +74,46 @@
                 to   { transform: scale(1); }
             }
 
+            .box {
+				margin: 20px auto;
+				background: #b7dd0b;
+				width: 150px;
+				height: 150px;
+			}
+
+			.circle {
+				transform: rotate(360deg);
+				background: #4e8c87;
+				border-radius: 50%;
+				margin: 20px auto;
+				width: 150px;
+				height: 150px;
+			}
+
+			.rotate {
+				transition: all 1s ease-in-out;
+			}
+
 		</style>
 	</head>
 	<body>
+		
 		<div ng-controller="NameExtractor" id="div1">
 			<h2>First Angular JS App</h2>
 			<input type="text" ng-model="name" id="name" placeholder="Type Something" ng-keyup="displayNumeric()">
 			<br><br>
-			<button ng-click="reset()">Reset</button>
-			<br><br>{{totalValue}}
+			<!--<input type="checkbox" ng-model="boxClass" /><br>-->
+			<button  ng-click="clickme()" ng-model="boxClass" id="box_button" >Box</button>
+			<button  ng-click="unclickme()" ng-model="boxClass" id="circle_button">Circle</button>
+			<br>
+			<div class="box rotate" ng-class="{'box': boxClass, 'circle': !boxClass} "></div>
+			
+			<button ng-click="reset()" id="reset_button">Reset</button><br>
+			<br>{{totalValue}}
 			<br><br>
 		</div>
+
+		
+
 	</body>
 </html>

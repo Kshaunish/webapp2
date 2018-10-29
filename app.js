@@ -5,10 +5,20 @@
 	
 	.controller('NameExtractor', function ($scope){
 
+		$scope.clickme = function() {
+			$scope.boxClass = true;
+		}
+
+		$scope.unclickme = function() {
+			$scope.boxClass = false;
+		}
+  		//$scope.boxClass = true;
 
 		$scope.reset = function() {
 			$scope.name="";
 			$scope.totalValue = "";
+			$scope.boxClass = false;
+
 		};
 				
 		$scope.displayNumeric = function() {
@@ -27,6 +37,8 @@
 			}
 			return totalStringValue;
 		};
+
 	});
 
+	
 })();
