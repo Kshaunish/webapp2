@@ -32,6 +32,8 @@
 
 			button {
 				position: relative;
+				font-size: 105%;
+				border-radius: 30px;
 				border-width: 0px;
 				background-image:-webkit-linear-gradient(
 				#acc5e9 10%, 		#a3c0f2 18%, 
@@ -40,33 +42,24 @@
 			}
 
 			#box_button {
-				width: 45px;
-				height: 45px;
-				border-radius: 5px;
-				font-weight: bold;
-				font-size: 115%; 
+				width: 100px;
+				height: 40px;
 			}
 
 			#circle_button {
-				width: 45px;
-				height: 45px;
-				border-radius: 50%;
-				font-weight: bold;
-				font-size: 115%;
-				padding-top: 5px;
+				width: 100px;
+				height: 40px;
 			}
 
 			#reset_button {
-				width: 120px;
-				height: 45px;
-				border-radius: 30px;
-				font-size: 105%;
+				width: 100px;
+				height: 40px;
 			}
 
 			#div1 {
 				position: relative;
 				top:120px;
-				border: solid 5px black;
+				border: solid 10px white;
 				margin: 0 auto;
 				width: 500px;
 				height: 500px;
@@ -102,15 +95,14 @@
 	<body>
 		
 		<div ng-controller="NameExtractor" id="div1" class="box rotate" ng-class="{'box': boxClass, 'circle': !boxClass}">
-			<br><br>
+			<br><br><br>
 
 			<p style="font-size: 140%;">First Angular JS App</p>
 			<input type="text" ng-model="name" id="name" placeholder="Type Something" ng-keyup="displayNumeric()">
 			<br><br><br>
 			<!--<input type="checkbox" ng-model="boxClass" /><br>-->
-			<button  ng-click="clickme()" ng-model="boxClass" id="box_button" >☐</button>&nbsp;&nbsp;&nbsp;&nbsp;
-			<button  ng-click="unclickme()" ng-model="boxClass" id="circle_button">◯</button>&nbsp;&nbsp;&nbsp;&nbsp;
-			
+			<button  ng-click="clickme()" ng-model="boxClass" id="box_button" >Box</button>&nbsp;&nbsp;&nbsp;&nbsp;
+			<button  ng-click="unclickme()" ng-model="boxClass" id="circle_button">Circle</button>&nbsp;&nbsp;&nbsp;&nbsp;
 			<!--<div class="box rotate" ng-class="{'box': boxClass, 'circle': !boxClass} "></div>-->
 			
 			<button ng-click="reset()" id="reset_button">Reset</button><br><br>
