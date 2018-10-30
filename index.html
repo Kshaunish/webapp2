@@ -61,8 +61,8 @@
 				top:120px;
 				border: solid 5px black;
 				margin: 0 auto;
-				width: 460px;
-				height: 460px;
+				width: 500px;
+				height: 500px;
 				background-color: black;
 				color: white;
 				opacity: 0.80;
@@ -95,14 +95,14 @@
 	<body>
 		
 		<div ng-controller="NameExtractor" id="div1" class="box rotate" ng-class="{'box': boxClass, 'circle': !boxClass}">
-			<br><br>
-			<h2>First Angular JS App</h2>
+			<br><br><br>
+
+			<p style="font-size: 140%;">First Angular JS App</p>
 			<input type="text" ng-model="name" id="name" placeholder="Type Something" ng-keyup="displayNumeric()">
-			<br><br>
+			<br><br><br>
 			<!--<input type="checkbox" ng-model="boxClass" /><br>-->
 			<button  ng-click="clickme()" ng-model="boxClass" id="box_button" >Box</button>
 			<button  ng-click="unclickme()" ng-model="boxClass" id="circle_button">Circle</button>
-			<br><br>
 			
 			<!--<div class="box rotate" ng-class="{'box': boxClass, 'circle': !boxClass} "></div>-->
 			
