@@ -17,7 +17,13 @@
 		$scope.reset = function() {
 			$scope.name="";
 			$scope.totalValue = "";
-			$scope.boxClass = false;
+			
+			if($scope.boxClass == true){
+				$scope.boxClass = false;
+			} else {
+				$scope.boxClass = true;
+			}
+			
 
 		};
 				
